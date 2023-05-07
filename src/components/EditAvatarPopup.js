@@ -18,9 +18,9 @@ export default function EditAvatarPopup({isOpen, onClose, onUpdateAvatar}) {
     }
 
     return (
-        <PopupWithForm name={"popup_avatar"}
-                       title={"Обновить аватар"}
-                       buttonText={"Сохранить"}
+        <PopupWithForm name="popup_avatar"
+                       title="Обновить аватар"
+                       buttonText="Сохранить"
                        isOpen={isOpen}
                        onClose={onClose}
                        handleSubmit={handleSubmit}>

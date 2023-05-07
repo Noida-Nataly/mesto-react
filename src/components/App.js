@@ -90,6 +90,9 @@ function App() {
         api.deleteCard(card._id).then(() => {
             setCards((state) => state.filter((item) => item._id !== card._id))
         })
+        .catch((err) => {
+                console.log(err);
+        });
     }
 
     function closeAllPopups() {
@@ -121,9 +124,9 @@ function App() {
                     onUpdateAvatar={handleUpdateAvatar}
                     />
 
-                <PopupWithForm name={"confirmation"}
-                               title={"Вы уверены?"}
-                               buttonText={"Да"}
+                <PopupWithForm name="confirmation"
+                               title="Вы уверены?"
+                               buttonText="Да"
                                isOpen={isConfirmationPopupOpen}
                                onClose={closeAllPopups}>
                 </PopupWithForm>

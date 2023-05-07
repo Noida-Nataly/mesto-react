@@ -23,9 +23,9 @@ export default function AddPlacePopup ({isOpen, onClose, onAddPlace}) {
 
 
     return (
-        <PopupWithForm name={"place"}
-                       title={"Новое место"}
-                       buttonText={"Создать"}
+        <PopupWithForm name="place"
+                       title="Новое место"
+                       buttonText="Создать"
                        isOpen={isOpen}
                        onClose={onClose}
                        handleSubmit={handleSubmit}
@@ -36,6 +36,7 @@ export default function AddPlacePopup ({isOpen, onClose, onAddPlace}) {
                 className="popup__input"
                 type="text"
                 placeholder="Название"
+                value = {name ?? ''}
                 onChange={handleNameChange}
                 minLength="2"
                 maxLength="30"
@@ -47,6 +48,7 @@ export default function AddPlacePopup ({isOpen, onClose, onAddPlace}) {
                 className="popup__input"
                 type="url"
                 placeholder="Ссылка на картинку"
+                value = {link ?? ''}
                 onChange={handleLinkChange}
                 required />
             <span id="place-link-error" className="popup__error-message"></span>

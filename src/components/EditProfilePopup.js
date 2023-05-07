@@ -21,7 +21,7 @@ export default function EditProfilePopup({
     React.useEffect(() => {
         setName(currentUser.name);
         setDescription(currentUser.about);
-    }, [currentUser]);
+    }, [currentUser, isOpen]);
 
     function handleSubmit (evt) {
         evt.preventDefault();
@@ -31,9 +31,9 @@ export default function EditProfilePopup({
     }
 
     return (
-        <PopupWithForm name={"profile"}
-                       title={"Редактировать профиль"}
-                       buttonText={"Сохранить"}
+        <PopupWithForm name="profile"
+                       title="Редактировать профиль"
+                       buttonText="Сохранить"
                        isOpen={isOpen}
                        onClose={onClose}
                        handleSubmit={handleSubmit}>
